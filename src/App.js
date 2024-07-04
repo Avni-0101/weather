@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Home from './Components/Home';
+import Fetch from './Components/Fetch';
 
 function App() {
+  const [city, setCity] = useState("");
+  const [check, setCheck] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen flex justify-center items-center bg-gray-100">
+      <div className="max-w-4xl w-full p-4">
+        {check ? (
+          <Fetch city={city} setCity={setCity} check={check} setCheck={setCheck} />
+        ) : (
+          <Home city={city} setCity={setCity} check={check} setCheck={setCheck} />
+        )}
+      </div>
     </div>
   );
 }
