@@ -1,11 +1,12 @@
 # Current Weather App
 
-Users can manage their contacts with 'Contact Notebook' built in react & styled in Tailwind CSS.\
-They can add contact info and store it until we delete them manually.
+Users can check current weather conditions by entering their city name in the prompt.\
+This project is built in react & styled in Tailwind CSS.\
 
 ### 👀Learnings/Objectives:
 Fetching data using API calls.\
 Source: weatherapi.\
+Docs: https://www.weatherbit.io/api/weather-current .\
 Used Axios' get requests.\
 Promises/async-await.\
 Handling state variable types for easy and correct visualisation to users.\
